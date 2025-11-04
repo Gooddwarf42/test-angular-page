@@ -40,7 +40,7 @@ jobs:
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: test-angular/dist/test-angular
+          path: test-angular/dist/test-angular/browser
           
   deploy:
     permissions:
