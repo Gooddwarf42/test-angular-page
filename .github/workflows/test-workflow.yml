@@ -32,6 +32,7 @@ jobs:
       - name: build
         run: |
           cd test-angular/
+          npm i
           npm run build
 
      # Runs a single command using the runners shell
