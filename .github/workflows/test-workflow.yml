@@ -24,14 +24,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: npm run build
 
      # Runs a single command using the runners shell
-     - name: Upload static files as artifact
+      - name: Upload static files as artifact
         id: deployment
-        uses: actions/upload-pages-artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: build_outputs_folder/
